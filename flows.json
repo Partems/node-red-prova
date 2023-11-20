@@ -1297,6 +1297,8 @@
             "#c5b0d5"
         ],
         "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
         "x": 303.86669921875,
         "y": 312.25,
         "wires": [
@@ -1325,6 +1327,8 @@
         ],
         "seg1": "",
         "seg2": "",
+        "diff": false,
+        "className": "",
         "x": 299.86669921875,
         "y": 402.75,
         "wires": []
@@ -1343,10 +1347,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "{\"group\":{\"hide\":[\"Admin_admin1\"],\"show\":[\"Admin_Control\",\"Admin_admin2\"]}}",
         "payloadType": "json",
         "topic": "",
+        "topicType": "str",
         "x": 304.75,
         "y": 120.75,
         "wires": [
@@ -1371,13 +1377,15 @@
         "multiple": false,
         "options": [
             {
-                "label": "",
-                "value": "",
+                "label": "Topic 1",
+                "value": "Topic",
                 "type": "str"
             }
         ],
         "payload": "",
         "topic": "",
+        "topicType": "str",
+        "className": "",
         "x": 495.86669921875,
         "y": 308.75,
         "wires": [
@@ -1416,10 +1424,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "black",
+        "className": "",
         "icon": "",
         "payload": "{\"group\":{\"hide\":[],\"show\":[\"Admin_Control\",\"Admin_admin2\",\"Admin_admin1\"]}}",
         "payloadType": "json",
         "topic": "",
+        "topicType": "str",
         "x": 309.75,
         "y": 182.75,
         "wires": [
@@ -1490,8 +1500,8 @@
         "z": "e1fde12c.9db918",
         "name": "",
         "events": "all",
-        "x": 922.86669921875,
-        "y": 132.75,
+        "x": 920,
+        "y": 140,
         "wires": [
             []
         ]
