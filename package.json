@@ -1,0 +1,12 @@
+{
+    "name": "prova_node_red",
+    "description": "esempi per imparare le basi di node-red",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
