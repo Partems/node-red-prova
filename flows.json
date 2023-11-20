@@ -153,7 +153,27 @@
         "wires": []
     },
     {
-        "id": "57bf37037c4bf2f7",
+        "id": "e3c52e83a83beb1c",
+        "type": "function",
+        "z": "455a3aa980c75a31",
+        "name": "function 1",
+        "func": "// Create a Date object from the payload\nvar date = new Date(msg.payload);\n// Change the payload to be a formatted Date string\nmsg.payload = date.toString();\n// Return the message so it can be sent on\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "3fe4aa0d5d4e71e4"
+            ]
+        ]
+    },
+    {
+        "id": "22bd6354b95e19d4",
         "type": "inject",
         "z": "455a3aa980c75a31",
         "name": "",
@@ -173,31 +193,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
+        "x": 130,
         "y": 100,
         "wires": [
             [
                 "e3c52e83a83beb1c"
-            ]
-        ]
-    },
-    {
-        "id": "e3c52e83a83beb1c",
-        "type": "function",
-        "z": "455a3aa980c75a31",
-        "name": "function 1",
-        "func": "// Create a Date object from the payload\nvar date = new Date(msg.payload);\n// Change the payload to be a formatted Date string\nmsg.payload = date.toString();\n// Return the message so it can be sent on\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 280,
-        "y": 180,
-        "wires": [
-            [
-                "3fe4aa0d5d4e71e4"
             ]
         ]
     },
