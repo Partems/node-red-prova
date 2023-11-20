@@ -40,12 +40,11 @@
         "env": []
     },
     {
-        "id": "ea239264f72f539e",
+        "id": "e1fde12c.9db918",
         "type": "tab",
-        "label": "dashboard UI",
+        "label": "Flow 1",
         "disabled": false,
-        "info": "",
-        "env": []
+        "info": ""
     },
     {
         "id": "6ec4dcef.913b24",
@@ -241,17 +240,10 @@
         }
     },
     {
-        "id": "305c8435b7b70d79",
-        "type": "ui_tab",
-        "name": "Tab 1",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
         "id": "21d1e494c12cb80f",
         "type": "ui_group",
         "name": "Group 1",
-        "tab": "305c8435b7b70d79",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "6",
@@ -259,20 +251,80 @@
         "className": ""
     },
     {
-        "id": "d540f8dd52a566b3",
-        "type": "ui_tab",
-        "name": "Tab 2",
-        "icon": "dashboard",
-        "order": 2
-    },
-    {
         "id": "6822c986c2a0cf6e",
         "type": "ui_group",
         "name": "Group 1",
-        "tab": "d540f8dd52a566b3",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": 6
+    },
+    {
+        "id": "5fcb0776.c461c8",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "7dfaf7ff.8d5ae",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "fc657953.1b728",
+        "type": "ui_group",
+        "name": "admin1",
+        "tab": "7dfaf7ff.8d5ae",
+        "order": 3,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "7f74a584.dea814",
+        "type": "ui_group",
+        "name": "admin2",
+        "tab": "7dfaf7ff.8d5ae",
+        "order": 4,
+        "disp": true,
+        "width": "21",
+        "collapse": false
+    },
+    {
+        "id": "f033628c.9c7ce",
+        "type": "ui_group",
+        "name": "Change Tabs",
+        "tab": "7dfaf7ff.8d5ae",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "f8bac202fbe387ec",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "8be53847c1a26213",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7dfaf7ff.8d5ae",
+        "type": "ui_tab",
+        "name": "Admin",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8be53847c1a26213",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "3fe4aa0d5d4e71e4",
@@ -1168,91 +1220,353 @@
         "wires": []
     },
     {
-        "id": "0062371603915e2c",
-        "type": "ui_text",
-        "z": "ea239264f72f539e",
-        "group": "21d1e494c12cb80f",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "id": "cd36436d.6c672",
+        "type": "ui_ui_control",
+        "z": "e1fde12c.9db918",
         "name": "",
-        "label": "Tab1",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 190,
-        "y": 100,
-        "wires": []
+        "events": "all",
+        "x": 488.86669921875,
+        "y": 95.75,
+        "wires": [
+            [
+                "da61fcfa.21c308"
+            ]
+        ]
     },
     {
-        "id": "5963c204326338fb",
+        "id": "9d00ec54.1bcdf",
         "type": "ui_button",
-        "z": "ea239264f72f539e",
-        "name": "",
-        "group": "6822c986c2a0cf6e",
+        "z": "e1fde12c.9db918",
+        "name": "Admin1",
+        "group": "5fcb0776.c461c8",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 3,
+        "height": 1,
         "passthru": false,
-        "label": "Jump to tab 1",
+        "label": "Admin1",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "fa-code",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 200,
-        "y": 240,
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Admin_admin2\"],\"show\":[\"Admin_Control\",\"Admin_admin1\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 300.8666687011719,
+        "y": 57.75,
         "wires": [
             [
-                "084f26d44e539a94"
+                "cd36436d.6c672"
             ]
         ]
     },
     {
-        "id": "084f26d44e539a94",
-        "type": "change",
-        "z": "ea239264f72f539e",
+        "id": "21235901.ddad66",
+        "type": "ui_chart",
+        "z": "e1fde12c.9db918",
         "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":\"Tab 1\"}",
-                "tot": "json"
-            }
+        "group": "fc657953.1b728",
+        "order": 5,
+        "width": 11,
+        "height": 1,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 200,
-        "wires": [
-            [
-                "395fa1ca13f8af93"
-            ]
-        ]
-    },
-    {
-        "id": "395fa1ca13f8af93",
-        "type": "ui_ui_control",
-        "z": "ea239264f72f539e",
-        "name": "",
-        "events": "all",
-        "x": 660,
-        "y": 200,
+        "outputs": 1,
+        "x": 303.86669921875,
+        "y": 312.25,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "fd60a5c0.2ecce",
+        "type": "ui_gauge",
+        "z": "e1fde12c.9db918",
+        "name": "",
+        "group": "fc657953.1b728",
+        "order": 4,
+        "width": 5,
+        "height": 1,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 299.86669921875,
+        "y": 402.75,
+        "wires": []
+    },
+    {
+        "id": "eb6bb9b4.b50a9",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Admin2",
+        "group": "5fcb0776.c461c8",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Admin2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Admin_admin1\"],\"show\":[\"Admin_Control\",\"Admin_admin2\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 304.75,
+        "y": 120.75,
+        "wires": [
+            [
+                "cd36436d.6c672"
+            ]
+        ]
+    },
+    {
+        "id": "5d930a29.c0d1f4",
+        "type": "ui_dropdown",
+        "z": "e1fde12c.9db918",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "7f74a584.dea814",
+        "order": 7,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 495.86669921875,
+        "y": 308.75,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a93bab8.36b096",
+        "type": "ui_date_picker",
+        "z": "e1fde12c.9db918",
+        "name": "",
+        "label": "date",
+        "group": "7f74a584.dea814",
+        "order": 8,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "",
+        "x": 481.86669921875,
+        "y": 395.25,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b96eb4f0.2b926",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Reset",
+        "group": "5fcb0776.c461c8",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "black",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[],\"show\":[\"Admin_Control\",\"Admin_admin2\",\"Admin_admin1\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 309.75,
+        "y": 182.75,
+        "wires": [
+            [
+                "cd36436d.6c672"
+            ]
+        ]
+    },
+    {
+        "id": "f19c719f.97fac",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Admin",
+        "group": "f033628c.9c7ce",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Admin",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Admin\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 703.75,
+        "y": 87.75,
+        "wires": [
+            [
+                "a3c3662e.b51e58"
+            ]
+        ]
+    },
+    {
+        "id": "c7e8af31.5e0208",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Home",
+        "group": "f033628c.9c7ce",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 707.75,
+        "y": 148.75,
+        "wires": [
+            [
+                "a3c3662e.b51e58"
+            ]
+        ]
+    },
+    {
+        "id": "a3c3662e.b51e58",
+        "type": "ui_ui_control",
+        "z": "e1fde12c.9db918",
+        "name": "",
+        "events": "all",
+        "x": 922.86669921875,
+        "y": 132.75,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da61fcfa.21c308",
+        "type": "debug",
+        "z": "e1fde12c.9db918",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 633.86669921875,
+        "y": 212.5,
+        "wires": []
+    },
+    {
+        "id": "9c39434bcf834519",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Admin",
+        "group": "f8bac202fbe387ec",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Admin",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Admin\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "a3c3662e.b51e58"
+            ]
+        ]
+    },
+    {
+        "id": "b703aea42e4f9911",
+        "type": "ui_button",
+        "z": "e1fde12c.9db918",
+        "name": "Home",
+        "group": "f8bac202fbe387ec",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 794,
+        "y": 341,
+        "wires": [
+            [
+                "a3c3662e.b51e58"
+            ]
         ]
     }
 ]
